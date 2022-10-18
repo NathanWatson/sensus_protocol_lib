@@ -1,8 +1,8 @@
-#ifndef _Sensus_Protocol_h_
-#define _Sensus_Protocol_h_
+#ifndef Sensus_Protocol_h
+#define Sensus_Protocol_h
 
 #include <Arduino.h>
-#include <String>
+
 
 class SensusProtocol {
   int clock_pin;
@@ -11,7 +11,7 @@ class SensusProtocol {
 
   static const auto clock_ON = LOW;
   static const auto clock_OFF = HIGH;
-  
+
   void powerUp();
   void powerDown();
   int readBit();
@@ -26,4 +26,4 @@ public:
 };
 
 
-#endif //  _Sensus_Protocol_h_
+#endif //  Sensus_Protocol_h

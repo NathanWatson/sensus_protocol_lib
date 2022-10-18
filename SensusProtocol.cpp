@@ -1,5 +1,5 @@
 #include "SensusProtocol.h"
-#include <String>
+
 
 #ifdef DEBUG_ESP_PORT
 #define DEBUG_MSG(...) DEBUG_ESP_PORT.printf( __VA_ARGS__ )
@@ -41,9 +41,9 @@ char SensusProtocol::readByte() {
     }
   }
   DEBUG_MSG("byte: %i, %c\n", result, result);
-  return result;    
+  return result;
 }
-  
+
 SensusProtocol::SensusProtocol(int clock_pin, int read_pin, bool read_pin_pullup)
  : clock_pin(clock_pin), read_pin(read_pin), read_pin_pullup(read_pin_pullup) {}
 

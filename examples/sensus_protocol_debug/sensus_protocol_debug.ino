@@ -45,10 +45,12 @@ void loop() {
   Serial.write("\n");
   lcd.init();
   lcd.setCursor(0,0);
-  lcd.print("data: %i, %s\n");
+  lcd.print("Register #1");
   lcd.setCursor(0,1);
-  lcd.print(data.length());
+  lcd.print("Serial: "+data.substring(13,22));
   lcd.setCursor(0,2);
-  lcd.print(data.c_str());
+  lcd.print("Reading: "+data.substring(4,10));
+  lcd.setCursor(0,3);
+  lcd.print("Other: "+data.substring(24,99));
   delay(500);
 }

@@ -1,5 +1,5 @@
 #include "SensusProtocol.h"
-
+#include <String>
 
 #ifdef DEBUG_ESP_PORT
 #define DEBUG_MSG(...) DEBUG_ESP_PORT.printf( __VA_ARGS__ )

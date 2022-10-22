@@ -54,3 +54,14 @@ void loop() {
   lcd.print("Other: "+data.substring(24,99));
   delay(500);
 }
+
+//Sample LCD OUTPUT
+//  Register #1
+//  Serial: 221008072
+//  Reading: 000002
+//  Other: 0302?!
+//Sample Serial OUTPUT
+//  entering loop...
+//  data: %i, %s
+//  
+//  V;RB000002;IB221008072;M0302?!

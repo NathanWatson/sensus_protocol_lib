@@ -5,8 +5,9 @@
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 
-int clock_pin = 6;
-int read_pin = 5;
+int clock_pin = 6; //Black wire
+int read_pin = 5; //Green Wire
+//Red wire is 3.3v
 
 SensusProtocol SensusProtocol(6,5,true);
 
@@ -65,3 +66,11 @@ void loop() {
 //  data: %i, %s
 //  
 //  V;RB000002;IB221008072;M0302?!
+
+// Register Pin Diagram
+//
+//    GREEN    RED
+//      *       *
+//
+//          *
+//        BLACK

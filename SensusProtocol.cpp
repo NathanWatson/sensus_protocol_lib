@@ -1,5 +1,5 @@
 #include "SensusProtocol.h"
-#include <String>
+#include <String.h>
 
 #ifdef DEBUG_ESP_PORT
 #define DEBUG_MSG(...) DEBUG_ESP_PORT.printf( __VA_ARGS__ )
@@ -22,7 +22,7 @@ int SensusProtocol::readBit() {
   digitalWrite(clock_pin, clock_ON);
   delay(1); // Seems to work even without it, but just for sure
   int val = digitalRead(read_pin); // LOW is 1 and HIGH is 0
-  DEBUG_MSG("bit: %i\n", val);
+  Serial.write("bit: %i\n", val);
   return val;
 }
 
